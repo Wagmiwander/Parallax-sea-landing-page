@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Adventure Parallax</title>
+    <link rel="stylesheet" type =text/css href="styles.css">
+  </head>
+  <body>
+<header id="header">
+  <a href="#" class="logo">Wilsons Prom</a>
+  
+
+</header>
+
+
+<section>
+  <h2 id="text"><span>Its time for a new</span> <br> Adventure</h2>
+  <img src="bird1.png" id="bird1">
+  <img src="bird2.png" id="bird2">
+  <img src="forest.png" id="forest">
+  <a href="https://www.parks.vic.gov.au/places-to-see/parks/wilsons-promontory-national-park" id="btn">Explore</a>
+  <img src="rocks.png" id="rocks">
+    <img src="water.png" id="water">
+
+
+
+</section>
+<div class="sec">
+  <h2>Wilsons Promontary National Park</h2>
+
+  <p>Welcome to Wilsons Prom, the southernmost tip of mainland Australia. Walk remote coastal bushland trails and swim at pristine beaches dominated by granite tors. Camp in comfort at family-friendly Tidal River or hike to a more secluded campsite. Either way, the local wombats, kangaroos and emus are waiting to meet you.
+
+Swim at Norman Beach - just a few minutes' walk from Tidal River Campground, or go snorkelling for a unique underwater view of Victoria's largest marine national park. Bring the family and camp in comfort at Tidal River. Choose from powered or unpowered sites or stay in roofed accommodation.
+
+Scale the granite peaks of Mount Bishop or Mount Oberon for panoramic views, or enjoy an overnight hike in The Prom. <br><br>In the north there's a remote and rugged wilderness to explore, while the south is home to the historic Wilsons Promontory Lightstation and Sealers Cove.
+
+Feel the sand between your toes at some of the more secluded beaches of Wilsons Prom, from Cotters Beach to Whisky Bay and Fairy Cove. <br><br>Check out Big Drift, an impressive inland sand dune system, one of the Prom's well kept secrets. You can book a free all-terrain wheelchair, TrailRider or beach wheelchair to explore the great outdoors at Wilsons Promontory National Park.
+
+As beaches and coasts are natural environments, you may encounter hazards. Follow our water safety advice to make sure your day out at Wilsons Promontory National Park is a safe and enjoyable one.</p>
+
+</div>
+
+<script>
+
+  let text = document.getElementById("text");
+  let bird1 = document.getElementById("bird1");
+  let bird2 = document.getElementById('bird2');
+  let btn = document.getElementById('btn');
+  let rocks = document.getElementById('rocks');
+  let forest = document.getElementById('forest');
+  let water = document.getElementById('water');
+  let header = document.getElementById('header');
+
+  window.addEventListener('scroll',function(){
+   let value = window.scrollY;
+
+    text.style.top =  30 + value * -0.5 + '%';
+bird1.style.top =  value * -1.5 + 'px';
+bird1.style.left =  value * 2 + 'px';
+bird2.style.top =  value * -1.5 + 'px';
+bird2.style.left =  value * -5 + 'px';
+btn.style.marginTop = value * 1.5 + 'px';
+rocks.style.top =  value * -.12 + 'px';
+forest.style.top =  value * .25 + 'px';
+header.style.top =  value * -.50 + 'px';
+  })
+
+</script>
+
+<script type="text/javascript"
+  window.addEventListener('scroll',()=>{
+
+    console.log('scrolled')
+  }
+
+</script>
+</script>
+  </body>
+</html>
